@@ -1,0 +1,9 @@
+<% if @attachment.new_record? %>
+  alert("Failed to upload the files: <%= j @attachment.errors.full_messages.join(' and ').html_safe %>");
+<% else %>
+  $("attachment-container").css("display", "block");
+  $("div.uploader .well").append("<p><%= @attachment.filename.identifier %> Successfully Uploaded</p>");
+<% end %>
+
+
+

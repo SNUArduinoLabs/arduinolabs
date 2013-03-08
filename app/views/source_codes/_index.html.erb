@@ -1,0 +1,42 @@
+
+<div class="source_codes_index">
+  <div class="well">
+    <h4>List of Source Code Submissions</h4>
+    <p>Submission are listed in descending order. Please upload the newest version if you bring any modifications. 
+      <strong>Review will be done based on the latest source-code submission</strong></p>
+
+    <% source_codes = current_model.source_codes.order("created_at desc") %>
+
+    <table class="table table-striped table-hover">
+      <thead>
+        <th>SourceCode</th>
+        <th>Status </th>
+        <th>View </th>
+      </thead>
+      <tbody>
+
+        <% source_codes.each do |code| %>
+          <tr>
+            <td>
+              <%= link_to code.name, source_code_path(code) %>
+            </td>
+            <td>
+              <% if code.status == "completed" %>
+                <span class="label label-success">Completed</span>
+              <% elsif code.status == "pending" %> 
+                <span class="label">Pending</span>
+              <% else %> 
+                <span class="label label-warning">Requires Modification</span>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to "View", source_code_path(code), class: 'btn btn-small' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+

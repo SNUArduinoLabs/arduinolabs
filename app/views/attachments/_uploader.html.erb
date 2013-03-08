@@ -1,0 +1,39 @@
+
+<% if active_admin %>
+  <div class="uploader">
+    <div class="panel">
+      <div class="well">
+        <h3>Upload Attachments</h3>
+        <div class="panel_contents" style="padding:2em">
+          <%= form_for [current_model, Attachment.new] do |f| %>
+            <%= f.file_field :filename, multiple: true, name: 'attachment' + '[filename]', id: 'new-attachment-admin' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="uploader">
+    <div class="well">
+      <h4>Upload Other Relevant Files (Images)</h4>
+      <%= form_for [current_model, Attachment.new] do |f| %>
+        <%= f.file_field :filename, id: 'new-attachment', style: "display:none" %>
+        <div class="input-append">
+          <input id="fileCover" class="input-large" type="text">
+            <a class="btn" onClick="$('input[id=new-attachment]').click();">Browse</a>
+          </div>
+        <% end %>
+        <div class="upload" style="display:none">
+          <div class="progress progress-striped active">
+            <div class="bar" style="width: 0%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+
+
+
+
+

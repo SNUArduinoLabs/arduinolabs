@@ -1,0 +1,11 @@
+
+<% if @source_code.new_record? %>
+  alert("Failed to upload the Source-Code: <%= j @source_code.errors.full_messages.join(' and ').html_safe %>");
+<% else %>
+  
+  $("div.source-code-uploader .well").append("<p><%= @source_code.content.identifier %> Successfully Uploaded</p>");
+<% end %>
+
+
+
+

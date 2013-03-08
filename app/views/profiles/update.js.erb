@@ -1,0 +1,5 @@
+<% if @profile.new_record? %>
+  alert("Failed to upload the files: <%= j @profile.errors.full_messages.join(' and ').html_safe %>");
+<% else %>
+  $("div.upload").append("<p><%= @profile.avatar.identifier %> Successfully Uploaded</p>");
+<% end %>

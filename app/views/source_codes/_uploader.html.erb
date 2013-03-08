@@ -1,0 +1,21 @@
+<div class="source-code-uploader">
+  <div class="well">
+    <h4>Upload Source-Code File</h4>
+    <%= form_for [current_model, SourceCode.new] do |f| %>
+      <%= f.file_field :content, id: 'new-source-code', style: "display:none" %>
+      <div class="input-append">
+        <input id="sourceCover" class="input-large" type="text">
+          <a class="btn" onClick="$('input[id=new-source-code]').click();">Browse</a>
+        </div>
+      <% end %>
+      <div class="source-upload" style="display:none">
+        <div class="progress progress-striped active">
+          <div class="bar" style="width: 0%"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+

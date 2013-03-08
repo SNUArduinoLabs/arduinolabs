@@ -1,0 +1,27 @@
+
+<%= simple_form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend>Edit User </legend>
+
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email %>
+    <%= f.input :password, hint: "Leave blank if you don't want to change your password" %>
+    <%= f.input :password_confirmation, hint: "Leave blank if you don't want to change your password"  %>
+    <%= f.input :university, input_html: { class: 'input-xlarge' } %>
+    <%= f.input :department, input_html: { class: 'input-xlarge' }  %>
+    <%= f.input :about_me, input_html: { rows: 6, cols: 70 } %>
+    
+    <div class="form-actions">
+      <%= f.button :submit, class: 'btn-primary' %> 
+      <%= link_to "Cancel", root_path, class: 'btn' %>
+    </div>
+
+
+
+<% end %>
+
+
+
+
+

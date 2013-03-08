@@ -1,0 +1,34 @@
+
+<h2>My Submissions</h2>
+
+<% if @submissions.any? %>
+  <table class="table table-striped table-hover">
+    <thead>
+      <th>Assignment Title</th>
+      <th>Status </th>
+      <th>Go to Submission's Page </th>
+    </thead>
+    <tbody>
+      <% @submissions.each do |sub| %>
+        <tr>
+          <td><%= link_to 'Submission for ' + sub.assignment.title, submission_path(sub) %></td>
+          <td>
+            <% if sub.completed %>
+              <span class="label label-success">Completed</span>
+            <% else %> 
+              <span class="label label-warning">Not Completed</span>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to "View", submission_path(sub), class: 'btn btn-small' %>
+            <%= link_to "Edit", edit_submission_path(sub), class: 'btn btn-primary btn-small' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p class="lead">You don't have any submissions yet. Go to the <%= link_to "Assignmnets Page", assignments_path %> and Challenge Some Assignments </p>
+<% end %>
+
+

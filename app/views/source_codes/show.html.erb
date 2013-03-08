@@ -1,0 +1,9 @@
+<h3>Source Code for "<%= @source_code.name %>"</h3>
+<pre id="source_code">
+  <%= CodeRay.scan(@file, :c).html(wrap: :div, line_numbers: :table, css: :style, highlight_lines: [1, 3, 4]).html_safe %> 
+</pre>
+
+
+<%= render "comments", source_code: @source_code %>
+
+

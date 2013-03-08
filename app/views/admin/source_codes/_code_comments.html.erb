@@ -1,0 +1,19 @@
+
+<div class="Comments">
+  <% source_code.comments.each do |cmt| %>
+    <p>
+      <strong><%= cmt.user.first_name %> -> </strong>
+      <%= cmt.content %>
+    </p>
+  <% end %>
+</div>
+
+<div class="new-comment">
+  <%= form_for [source_code, Comment.new] do |f| %>
+
+    <%= f.text_field :content %>
+    <%= f.submit "Comment", remote: true %>
+  <% end %>
+  <p>This comments will appear on the Source-code submissions page of the user </p>
+</div>
+

@@ -1,0 +1,13 @@
+
+<li class="span3 thumbnail-container">
+  <div class="thumbnail">
+    <a href="<%= attachment.filename.url %>" class="thumbnail">
+      <img src="<%= attachment.filename.url(:thumb) %>" alt="<%= attachment.filename.identifier %>" />
+    </a>
+      <div class="caption">
+        <p>
+          <%= link_to "Remove", polymorphic_path([current_model, attachment]), method: :delete, remote: true, id: 'attachment' + attachment.id.to_s, class: 'attachment-remove' %>
+        </p>
+      </div>
+  </div>
+</li>

@@ -1,0 +1,58 @@
+
+
+<% if active_admin %>
+  <div class="attachment-container" style="<%= "display:none" unless current_model.attachments.any? %>" >
+    <div class="panel">
+      <h3>Attachments</h3>
+      <div class="panel_contents">
+        <table class="index_grid" style="max-width:940px; padding:2em;">
+          <tbody>
+            <% current_model.attachments.in_groups_of(4, false) do |group| %>
+              <tr>
+                <% group.each do |attachment| %>
+                  <td id="<%= 'attachment' + attachment.id.to_s %>" class="thumbnail-container">
+                    <a href="<%= attachment.filename.url %>">
+                      <img src="<%= attachment.filename.url(:thumb) %>" alt="<%= attachment.filename.identifier %>" />
+                    </a>
+                    <br /> 
+                    <%= link_to "Remove", polymorphic_path([current_model, attachment]), method: :delete, remote: true, id: 'attachment' + attachment.id.to_s, class: 'attachment-remove' %>
+                  </td>
+                <% end %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+<% else %>
+  <div class="attachment-container" style="<%= "display:none" unless current_model.attachments.any? %>">
+    <h4>Attachments </h4>
+    <div class="well" id="attachments">
+      <ul class="thumbnails">
+        <% current_model.attachments.each do |attachment| %>
+          <%= render "attachments/item", attachment: attachment, current_model: current_model %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+<!--
+<script type="text/javascript">
+  $(function () {
+    $(".attachment-remove").click(function (e) {
+      $(this).parent().remove();
+      console.log($(this).parent().parent());
+      $(str).remove();
+
+    });
+  });
+</script>
+--!>
+
+
+
+

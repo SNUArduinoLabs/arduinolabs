@@ -1,0 +1,19 @@
+
+<% if current_user.submissions.where("assignment_id is ?", @assignment.id).any? %>
+  <%= render "header", model: @assignment,  show_button: false, show_submission: false %>
+<% else %>
+  <%= render "header", model: @assignment,  show_button: true, show_submission: false %>
+<% end %>
+
+<h4>Detailed Instructions</h4>
+<pre style="padding:2em; background-color:#FFFFFF"><%= @assignment.content.html_safe %></pre>
+
+
+<% if @assignment.attachments.any? %>
+  <%= render "attachments/list", current_model: @assignment, active_admin: false %>
+<% end %>
+
+
+
+
+

@@ -1,0 +1,14 @@
+
+<%= render 'assignments/header', model: @submission.assignment, show_button: false, show_submission: true %>
+
+<% if @submission.source_codes.any? %>
+  <%= render 'source_codes/index', current_model: @submission %>
+<% else %>
+  <div class="well">
+    <p class="lead">You haven't uploaded any source-codes yet. Upload them to be be reviewed by admin</p>
+  </div>
+<% end %>
+
+<%= render 'attachments/list', current_model: @submission, active_admin: false %>
+
+

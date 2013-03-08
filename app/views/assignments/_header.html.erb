@@ -1,0 +1,35 @@
+
+<div class="well">
+  <h3 style="display:inline"><%= "Submission for " if show_submission %><%= link_to model.title, assignment_path(model) %></h3> 
+  <table class="table table-striped">
+    <tr>
+      <td width="70%">
+        <div class="pagination pagination-large">
+          <ul>
+            <li>
+              <span>Category <%= intensity_badge_tag(model.category.name) %></span>
+            </li>
+            <li>
+              <span>Level <%= intensity_badge_tag(model.level) %></span>
+            </li>
+            <li>
+              <span>Difficulty <%= intensity_badge_tag(model.difficulty) %></span>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td style="padding-top:2.5em">
+        <% if show_button %>
+          <%= link_to "Take the Challenge!", start_assignment_path(model.id), class: "btn btn-success" %>
+        <% else %>
+          <% submission = current_user.submissions.where("assignment_id is ?", model.id).first %>
+          <%= link_to "Edit your Assignment", edit_submission_path(submission), class: "btn btn-success" if submission %>
+          <% unless show_submission %>
+            <p>You have already applied for this Assignment. </p>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+  <p class="lead"><%= model.tagline %></p>
+</div>

@@ -1,0 +1,20 @@
+
+<%= semantic_form_for [:admin, @user] do |f| %>
+  <%= f.inputs name: "Basic Information" do %>
+    <%= f.input :first_name %>
+    <%= f.input :last_name %>
+    <%= f.input :email, required: true %>
+    <%= f.input :password, required: true %>
+    <%= f.input :password_confirmation, required: true  %>
+    <%= f.input :university, required: true  %>
+    <%= f.input :department, required: true  %>
+    <%= f.input :class_id, required: true  %>
+    
+  <% end %>
+  <%= f.actions %>
+    
+
+<% end %>
+
+
+

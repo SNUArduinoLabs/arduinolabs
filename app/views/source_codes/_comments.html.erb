@@ -1,0 +1,22 @@
+
+<% if source_code.comments.any? %>
+  <div class="well">
+    <div class="Comments">
+      <% source_code.comments.each do |cmt| %>
+        <p>
+          <strong><%= cmt.user.first_name %></strong> -> <%= cmt.content %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+<div class="well">
+  <div class="new-comment">
+    <%= simple_form_for [source_code, Comment.new] do |f| %>
+      <%= f.input :content, input_html: { rows: 5, cols: 30 }  %>
+      <%= f.submit "Comment", remote: true %>
+    <% end %>
+  </div>
+</div>
+
+
