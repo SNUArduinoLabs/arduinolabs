@@ -8,6 +8,7 @@
 #
 
 
+AdminUser.create!(:email => 'admin@atsnu.com', :password => 'password', :password_confirmation => 'password')
 
 
 
