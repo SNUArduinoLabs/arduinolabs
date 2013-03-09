@@ -6,11 +6,7 @@ class SourceCodesController < ApplicationController
 
   def show
     @source_code = SourceCode.find(params[:id])
-    @file = ""
-    IO.foreach(@source_code.content.url) do |line|
-      @file += line
-    end
-    #@file = File.open(@source_code.content.url, "r").read
+    @file = fetch_file(@source_code.content.current_path)
   end
 
   def create
@@ -47,5 +43,16 @@ class SourceCodesController < ApplicationController
     @source_codeable = resource.singularize.classify.constantize.find(id)
   end
 
+  def fetch_file(path)
+    connection = Fog::Storage.new({
+      :provider                 => 'AWS',
+      :aws_access_key_id        => ENV['S3_KEY'],
+      :aws_secret_access_key    => ENV['S3_SECRET_KEY']
+    })
+
+    directory = connection.directories.get('arduinolabs')
+    file = directory.files.get(path)
+    file.body if file
+  end
 
 end

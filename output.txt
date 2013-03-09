@@ -1,0 +1,101 @@
+2013-03-09T02:54:02+00:00 app[web.1]: Compiled ckeditor/skins/moono/editor_ie8.css  (491ms)  (pid 2)
+2013-03-09T02:54:02+00:00 app[web.1]: Compiled ckeditor/skins/moono/editor_gecko.css  (466ms)  (pid 2)
+2013-03-09T02:54:02+00:00 app[web.1]: Compiled profiles.css  (0ms)  (pid 2)
+2013-03-09T02:54:02+00:00 app[web.1]: Compiled comments.css  (1ms)  (pid 2)
+2013-03-09T02:54:02+00:00 app[web.1]: Compiled ckeditor/skins/moono/editor_ie.css  (527ms)  (pid 2)
+2013-03-09T02:54:02+00:00 app[web.1]: Compiled uploader.css  (0ms)  (pid 2)
+2013-03-09T02:54:02+00:00 app[web.1]: Compiled ckeditor/skins/moono/editor.css  (470ms)  (pid 2)
+2013-03-09T02:54:02+00:00 app[web.1]: Compiled welcome.css  (1ms)  (pid 2)
+2013-03-09T02:54:02+00:00 app[web.1]: Compiled application.css  (5326ms)  (pid 2)
+2013-03-09T02:54:02+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=arduinolabs.herokuapp.com fwd="147.47.249.164" dyno=web.1 queue=0 wait=0ms connect=3ms service=186ms status=304 bytes=0
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-alert.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-modal.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-scrollspy.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-tab.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-dropdown.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-transition.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-popover.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-tooltip.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-button.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-carousel.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-collapse.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-typeahead.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap/bootstrap-affix.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled twitter/bootstrap.js  (168ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled assignments.js  (1ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled bootstrap.js  (2ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled profiles.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled sessions.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled underscore.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled attachments.js  (21ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled home.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled submissions.js  (1ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled underscore_settings.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled uploader.js  (1ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled comments.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled source_codes.js  (26ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled users.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled welcome.js  (0ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Compiled application.js  (353ms)  (pid 2)
+2013-03-09T02:54:25+00:00 app[web.1]: Completed 200 OK in 52281ms (Views: 52253.3ms | ActiveRecord: 25.7ms)
+2013-03-09T02:54:58+00:00 app[web.1]:   Rendered home/index.html.erb within layouts/application (0.2ms)
+2013-03-09T02:54:58+00:00 app[web.1]: Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 3.0ms)
+2013-03-09T02:54:58+00:00 app[web.1]: Processing by HomeController#index as HTML
+2013-03-09T02:54:58+00:00 app[web.1]: Started GET "/home" for 147.47.249.164 at 2013-03-09 02:54:58 +0000
+2013-03-09T02:54:58+00:00 app[web.1]: Started GET "/assets/fontawesome-webfont.woff?v=3.0.2" for 147.47.249.164 at 2013-03-09 02:54:58 +0000
+2013-03-09T02:54:59+00:00 app[web.1]: Served asset /fontawesome-webfont.woff - 304 Not Modified (184ms)
+2013-03-09T02:54:59+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=arduinolabs.herokuapp.com fwd="147.47.249.164" dyno=web.1 queue=0 wait=0ms connect=0ms service=4ms status=304 bytes=0
+2013-03-09T02:55:02+00:00 heroku[router]: at=info method=GET path=/submissions host=arduinolabs.herokuapp.com fwd="147.47.249.164" dyno=web.1 queue=0 wait=0ms connect=21ms service=266ms status=304 bytes=0
+2013-03-09T02:55:01+00:00 app[web.1]: Started GET "/submissions" for 147.47.249.164 at 2013-03-09 02:55:01 +0000
+2013-03-09T02:55:02+00:00 app[web.1]:   Rendered submissions/index.html.erb within layouts/application (76.3ms)
+2013-03-09T02:55:02+00:00 app[web.1]: Processing by SubmissionsController#index as HTML
+2013-03-09T02:55:02+00:00 app[web.1]: Completed 200 OK in 224ms (Views: 13.9ms | ActiveRecord: 97.8ms)
+2013-03-09T02:54:58+00:00 heroku[router]: at=info method=GET path=/home host=arduinolabs.herokuapp.com fwd="147.47.249.164" dyno=web.1 queue=0 wait=0ms connect=2ms service=77ms status=200 bytes=3161
+2013-03-09T02:54:59+00:00 heroku[router]: at=info method=GET path=/assets/fontawesome-webfont.woff?v=3.0.2 host=arduinolabs.herokuapp.com fwd="147.47.249.164" dyno=web.1 queue=0 wait=0ms connect=1ms service=191ms status=304 bytes=0
+2013-03-09T02:55:04+00:00 app[web.1]: Started GET "/submissions/1/edit" for 147.47.249.164 at 2013-03-09 02:55:04 +0000
+2013-03-09T02:55:06+00:00 heroku[router]: at=info method=GET path=/submissions/1/edit host=arduinolabs.herokuapp.com fwd="147.47.249.164" dyno=web.1 queue=0 wait=0ms connect=0ms service=1892ms status=304 bytes=0
+2013-03-09T02:55:06+00:00 app[web.1]: Processing by SubmissionsController#edit as HTML
+2013-03-09T02:55:06+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered assignments/_header.html.erb (20.8ms)
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered attachments/_item.html.erb (2.6ms)
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered attachments/_list.html.erb (8.9ms)
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered source_codes/_uploader.html.erb (1.8ms)
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered source_codes/_index.html.erb (3.0ms)
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered attachments/_uploader.html.erb (1.2ms)
+2013-03-09T02:55:06+00:00 app[web.1]: Completed 200 OK in 93ms (Views: 29.5ms | ActiveRecord: 54.4ms)
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered submissions/edit.html.erb within layouts/application (41.1ms)
+2013-03-09T02:55:06+00:00 app[web.1]: Started GET "/submissions/1" for 147.47.249.164 at 2013-03-09 02:55:06 +0000
+2013-03-09T02:55:06+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered assignments/_header.html.erb (5.1ms)
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered submissions/show.html.erb within layouts/application (20.5ms)
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered attachments/_item.html.erb (1.4ms)
+2013-03-09T02:55:06+00:00 app[web.1]: Completed 200 OK in 30ms (Views: 17.7ms | ActiveRecord: 10.9ms)
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered attachments/_list.html.erb (5.1ms)
+2013-03-09T02:55:06+00:00 app[web.1]: Processing by SubmissionsController#show as HTML
+2013-03-09T02:55:06+00:00 app[web.1]:   Rendered source_codes/_index.html.erb (4.6ms)
+2013-03-09T02:55:06+00:00 heroku[router]: at=info method=GET path=/submissions/1 host=arduinolabs.herokuapp.com fwd="147.47.249.164" dyno=web.1 queue=0 wait=0ms connect=2ms service=41ms status=304 bytes=0
+2013-03-09T02:55:11+00:00 heroku[router]: at=info method=GET path=/source_codes/1 host=arduinolabs.herokuapp.com fwd="147.47.249.164" dyno=web.1 queue=0 wait=0ms connect=3ms service=73ms status=500 bytes=643
+2013-03-09T02:55:11+00:00 app[web.1]: Started GET "/source_codes/1" for 147.47.249.164 at 2013-03-09 02:55:11 +0000
+2013-03-09T02:55:11+00:00 app[web.1]: 
+2013-03-09T02:55:11+00:00 app[web.1]: Errno::ENOENT (No such file or directory - https://s3-ap-southeast-1.amazonaws.com/arduinolabs/uploads/source_codes/source_code/content/1/alarm.ino):
+2013-03-09T02:55:11+00:00 app[web.1]:   app/controllers/source_codes_controller.rb:9:in `initialize'
+2013-03-09T02:55:11+00:00 app[web.1]:   app/controllers/source_codes_controller.rb:9:in `open'
+2013-03-09T02:55:11+00:00 app[web.1]:   app/controllers/source_codes_controller.rb:9:in `show'
+2013-03-09T02:55:11+00:00 app[web.1]: 
+2013-03-09T02:55:11+00:00 app[web.1]: 
+2013-03-09T02:55:11+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2013-03-09T02:55:11+00:00 app[web.1]: Processing by SourceCodesController#show as HTML
+2013-03-09T02:55:11+00:00 app[web.1]: Completed 500 Internal Server Error in 4ms
+2013-03-09T02:54:58+00:00 heroku[router]: at=info method=GET path=/arduino-labsl-logo.png host=arduinolabs.herokuapp.com fwd="147.47.249.164" dyno=web.1 queue=0 wait=0ms connect=3ms service=10ms status=200 bytes=20933
+2013-03-09T03:01:04+00:00 heroku[router]: at=info method=GET path=/favicon.ico host=arduinolabs.herokuapp.com fwd="147.47.249.164" dyno=web.1 queue=0 wait=0ms connect=2ms service=339ms status=304 bytes=0
+2013-03-09T03:01:07+00:00 app[web.1]: Started GET "/source_codes/1" for 147.47.249.164 at 2013-03-09 03:01:03 +0000
+2013-03-09T03:01:07+00:00 app[web.1]: 
+2013-03-09T03:01:07+00:00 app[web.1]: Errno::ENOENT (No such file or directory - https://s3-ap-southeast-1.amazonaws.com/arduinolabs/uploads/source_codes/source_code/content/1/alarm.ino):
+2013-03-09T03:01:07+00:00 app[web.1]:   app/controllers/source_codes_controller.rb:9:in `initialize'
+2013-03-09T03:01:07+00:00 app[web.1]:   app/controllers/source_codes_controller.rb:9:in `show'
+2013-03-09T03:01:07+00:00 app[web.1]:   app/controllers/source_codes_controller.rb:9:in `open'
+2013-03-09T03:01:07+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2013-03-09T03:01:07+00:00 app[web.1]: Processing by SourceCodesController#show as HTML
+2013-03-09T03:01:07+00:00 app[web.1]: 
+2013-03-09T03:01:07+00:00 app[web.1]: Completed 500 Internal Server Error in 5ms
+2013-03-09T03:01:07+00:00 app[web.1]: 
