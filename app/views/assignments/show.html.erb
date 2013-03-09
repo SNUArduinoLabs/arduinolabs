@@ -1,5 +1,5 @@
 
-<% if current_user.submissions.where("assignment_id is ?", @assignment.id).any? %>
+<% if current_user.submissions.where(:assignment_id => @assignment.id).any? %>
   <%= render "header", model: @assignment,  show_button: false, show_submission: false %>
 <% else %>
   <%= render "header", model: @assignment,  show_button: true, show_submission: false %>

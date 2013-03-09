@@ -17,7 +17,7 @@
         <td><%= asg.level %></td>
         <td><%= asg.difficulty %></td>
         <td>
-          <% if current_user.submissions.where("assignment_id is ?", asg.id).any? %>
+          <% if current_user.submissions.where(:assignment_id => asg.id).any? %>
             <span class="label label-success">Already Taken</span>
           <% else %>
             <span class="label label">Not Taken</span>

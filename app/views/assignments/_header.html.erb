@@ -22,7 +22,7 @@
         <% if show_button %>
           <%= link_to "Take the Challenge!", start_assignment_path(model.id), class: "btn btn-success" %>
         <% else %>
-          <% submission = current_user.submissions.where("assignment_id is ?", model.id).first %>
+          <% submission = current_user.submissions.where(:assignment_id => model.id).first %>
           <%= link_to "Edit your Assignment", edit_submission_path(submission), class: "btn btn-success" if submission %>
           <% unless show_submission %>
             <p>You have already applied for this Assignment. </p>
