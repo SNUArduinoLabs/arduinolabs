@@ -6,7 +6,7 @@ class SourceCodesController < ApplicationController
 
   def show
     @source_code = SourceCode.find(params[:id])
-    @file = File.open(Rails.public_path + @source_code.content.url, "r").read
+    @file = File.open(@source_code.content.url, "r").read
   end
 
   def create
