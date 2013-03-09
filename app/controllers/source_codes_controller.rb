@@ -6,7 +6,11 @@ class SourceCodesController < ApplicationController
 
   def show
     @source_code = SourceCode.find(params[:id])
-    @file = File.open(@source_code.content.url, "r").read
+    @file = ""
+    IO.foreach(@source_code.content.url) do |line|
+      @file += line
+    end
+    #@file = File.open(@source_code.content.url, "r").read
   end
 
   def create
