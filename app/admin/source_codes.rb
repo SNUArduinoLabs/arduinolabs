@@ -42,7 +42,7 @@ ActiveAdmin.register SourceCode do
     end
     attributes_table do
       row "Source Code" do  
-        render 'source_codes/code', source_code: code, file: File.open(Rails.public_path + code.content.url, "r").read
+        render 'source_codes/code', source_code: code, file: fetch_file(code.content.current_path)
       end
     end
     attributes_table do
@@ -64,7 +64,22 @@ ActiveAdmin.register SourceCode do
 
   end
 
+  controller do 
+    private
 
+    def fetch_file(path)
+      connection = Fog::Storage.new({
+        :provider                 => 'AWS',
+        :aws_access_key_id        => ENV['S3_KEY'],
+        :aws_secret_access_key    => ENV['S3_SECRET_KEY']
+      })
+
+      directory = connection.directories.get('arduinolabs')
+      file = directory.files.get(path)
+      file.body if file
+    end
+    helper_method :fetch_file
+  end
 
 end
 
