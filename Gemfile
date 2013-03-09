@@ -19,6 +19,11 @@ gem 'mini_magick'
 gem 'fog', '~> 1.0.0'
 gem 'coderay'
 
+# For New Relic
+gem 'newrelic_rpm'
+
+
+
 # For Memcache
 gem 'dalli'
 
@@ -42,7 +47,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
-
+  gem 'turbo-sprockets-rails3'
 end
 
 

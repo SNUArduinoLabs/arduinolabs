@@ -138,6 +138,7 @@ GEM
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-ssh (2.1.4)
+    newrelic_rpm (3.5.8.72)
     nokogiri (1.5.6)
     orm_adapter (0.4.0)
     pg (0.14.1)
@@ -198,6 +199,9 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    turbo-sprockets-rails3 (0.3.6)
+      railties (> 3.2.8, < 4.0.0)
+      sprockets (>= 2.0.0)
     twitter-bootstrap-rails (2.2.6)
       actionpack (>= 3.1)
       execjs
@@ -229,12 +233,14 @@ DEPENDENCIES
   less-rails
   meta_request
   mini_magick
+  newrelic_rpm
   pg
   rails (= 3.2.11)
   rmagick
   sass-rails (~> 3.2.3)
   simple_form
   therubyracer
+  turbo-sprockets-rails3
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
   underscore-rails
