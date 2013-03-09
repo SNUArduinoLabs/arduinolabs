@@ -4,7 +4,13 @@ ActiveAdmin.register Assignment do
 
     def new
       @assignment = Assignment.new
+      @category = Category.new
       #      @attachment = @assignment.attachments.build
+    end
+
+    def edit
+      @assignment = Assignment.find(params[:id])
+      @category = @assignment.category
     end
 
 
