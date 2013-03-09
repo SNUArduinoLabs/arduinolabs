@@ -59,5 +59,8 @@ module Assignments
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # for Caching
+    config.cache_store = :dalli_store
   end
 end

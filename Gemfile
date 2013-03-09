@@ -19,6 +19,8 @@ gem 'mini_magick'
 gem 'fog', '~> 1.0.0'
 gem 'coderay'
 
+# For Memcache
+gem 'dalli'
 
 group :development do
   gem 'better_errors'

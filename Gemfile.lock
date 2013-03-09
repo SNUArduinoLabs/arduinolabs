@@ -68,6 +68,7 @@ GEM
       execjs
     coffee-script-source (1.6.1)
     commonjs (0.2.6)
+    dalli (2.6.2)
     debug_inspector (0.0.2)
     devise (2.2.3)
       bcrypt-ruby (~> 3.0)
@@ -221,6 +222,7 @@ DEPENDENCIES
   ckeditor
   coderay
   coffee-rails (~> 3.2.1)
+  dalli
   fog (~> 1.0.0)
   jquery-rails
   jquery.fileupload-rails
