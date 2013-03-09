@@ -6,8 +6,8 @@ class SubmissionsController < ApplicationController
 
   def start
     @assignment = Assignment.find(params[:assignment_id])
-    if current_user.submissions.where("assignment_id is ?", @assignment.id).any? 
-      submission = current_user.submissions.where("assignment_id is ?", @assignment.id).first
+    if current_user.submissions.where(:assignment_id => @assignment.id).any? 
+      submission = current_user.submissions.where(:assignment_id => @assignment.id).first
       redirect_to submission_path(submission), notice: "You already had applied for this challenge, Go to the Edit Page, to add your Source Code"
     else
       @submission = Submission.new
