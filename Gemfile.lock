@@ -219,6 +219,7 @@ DEPENDENCIES
   binding_of_caller
   carrierwave
   ckeditor
+  coderay
   coffee-rails (~> 3.2.1)
   fog (~> 1.0.0)
   jquery-rails

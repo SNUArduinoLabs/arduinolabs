@@ -17,6 +17,7 @@ gem 'carrierwave'
 gem 'rmagick', :require => 'RMagick'
 gem 'mini_magick'
 gem 'fog', '~> 1.0.0'
+gem 'coderay'
 
 
 group :development do
