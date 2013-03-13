@@ -56,11 +56,11 @@ ActiveAdmin.register SourceCode do
 
 
   action_item :only => :show do
-    link_to "Approve", approve_path(source_code) if source_code.status == :pending
+    link_to "Approve", approve_path(source_code) #if source_code.status == :pending
   end
 
   action_item :only => :show do
-    link_to "Reject", reject_path(source_code) if source_code.status == :pending
+    link_to "Reject", reject_path(source_code) #if source_code.status == :pending
 
   end
 
