@@ -12,4 +12,14 @@ class Submission < ActiveRecord::Base
   # Validations
   validates_presence_of :user, :assignment
 
+  def complete!
+    self.completed = true
+    self.completed_at = Time.now
+    self.user.points += self.assignment.points
+    self.user.save
+    self.save
+  end
+
+
+
 end

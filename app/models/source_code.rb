@@ -24,8 +24,6 @@ class SourceCode < ActiveRecord::Base
   def approve!
     self.status = :completed
     self.save
-    self.source_codeable.completed = true
-    self.source_codeable.completed_at = Time.now
-    self.source_codeable.save
+    self.source_codeable.complete!
   end
 end
