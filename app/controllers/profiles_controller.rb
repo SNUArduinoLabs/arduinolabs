@@ -4,6 +4,8 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = current_user.profile
+    submissions = @profile.user.submissions
+    @submissions_count = submissions.where(:completed => true).count 
   end
 
   def edit

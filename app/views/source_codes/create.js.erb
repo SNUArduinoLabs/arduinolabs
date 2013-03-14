@@ -4,6 +4,7 @@
 <% else %>
   
   $("div.source-code-uploader .well").append("<p><%= @source_code.content.identifier %> Successfully Uploaded</p>");
+  $("div.source-upload").css("display", "none");
 <% end %>
 
 

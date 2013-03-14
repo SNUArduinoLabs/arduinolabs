@@ -15,6 +15,8 @@
         <td>
           <h4><%= @profile.user.full_name %></h4>
           <p class="lead"><%= @profile.tagline %></p>
+          <p class="lead"><%= number_badge @profile.user.points %> Points Accumulated</p>
+          <p class="lead"><%= number_badge @submissions_count %> Assignments Completed</p>
 
         </td>
       </tr>
@@ -32,6 +34,14 @@
         </td>
         <td>
           <%= @profile.interests %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          소속:
+        </td>
+        <td>
+          <%= @profile.user.university + ", " + @profile.user.department %>
         </td>
       </tr>
     </table>

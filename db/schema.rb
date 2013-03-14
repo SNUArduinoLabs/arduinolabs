@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130308100723) do
+ActiveRecord::Schema.define(:version => 20130314105920) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -51,9 +51,9 @@ ActiveRecord::Schema.define(:version => 20130308100723) do
     t.string   "tagline"
     t.text     "content"
     t.integer  "points"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-    t.integer  "level",      :limit => 255
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "level"
     t.integer  "difficulty"
   end
 
@@ -144,6 +144,7 @@ ActiveRecord::Schema.define(:version => 20130308100723) do
     t.string   "auth_token"
     t.string   "password_reset_token"
     t.datetime "password_reset_token_sent_at"
+    t.integer  "points",                       :default => 0
   end
 
 end
