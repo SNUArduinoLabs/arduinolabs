@@ -12,5 +12,4 @@ class Assignment < ActiveRecord::Base
   validates_inclusion_of :difficulty, :level, in: 1..3, message: "Should be an integer from 1 ~ 3"
   validates_presence_of :content, :tagline, :title, :points, :level, :difficulty, :category
 
-
 end
