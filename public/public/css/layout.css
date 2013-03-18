@@ -1190,6 +1190,37 @@ animation-name: fadeInDown;
 .ch-img-4 { 
 	background-image: url(../images/4.jpg);
 }
+
+
+.ch-img-5 {
+	background-image: url(../images/5.jpg);
+}
+
+.ch-img-6 { 
+	background-image: url(../images/6.jpg);
+}
+
+.ch-img-7 { 
+	background-image: url(../images/7.jpg);
+}
+
+.ch-img-8 { 
+	background-image: url(../images/8.jpg);
+}
+
+
+.ch-img-9 { 
+	background-image: url(../images/9.png);
+}
+
+
+
+
+
+
+
+
+
 .ch-info h6 {
 	font-family: 'OpenSans-Regular-webfont';
 	color: #000;
