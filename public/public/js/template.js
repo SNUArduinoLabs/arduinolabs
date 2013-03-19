@@ -46,7 +46,7 @@ $.ajax({
 })(jQuery);
 
 // call the plugin
-$('#team-top').parallax({ "coeff":-0.25 });
+//$('#team-top').parallax({ "coeff":-0.25 });
 //$('#services-top').parallax({ "coeff":-0.14 });
 //$('#works-top').parallax({ "coeff":-0.10 });
 //$('#blog-top').parallax({ "coeff":-0.08 });

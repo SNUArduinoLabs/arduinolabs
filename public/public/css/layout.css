@@ -4,22 +4,6 @@
 
 /* #PARALLAX */
 
-#team-top{
-	position: relative;
-	background: url(../images/parallax/1.jpg) no-repeat top center; 
-	width:100%;
-}
-#team-top h3{
-	color:#fff;
-	font-size: 40px; 
-	line-height: 46px;
-	position: relative;
-	top: 120px;
-	font-weight: bold;
-}
-#team-top h3:hover{
-	color:#FA6900;
-}
 #services-top{
 	position: relative;
 	background: url(../images/parallax/2.jpg) no-repeat top center; 
@@ -760,7 +744,8 @@ animation-name: fadeInDown;
 
 #arrow{ 
 	position:absolute;
-	bottom:60px;
+        top: 500px;
+	bottom:30px;
 	left:27%;
 	margin-left:-50px;
 	z-index:1999;
