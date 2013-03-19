@@ -774,6 +774,13 @@ animation-name: fadeInDown;
     position:relative;
 	padding-bottom:120px;
 }
+
+#free-space {
+  background:url('../images/parallax/diagmonds.png') repeat;
+  position:relative;
+}
+
+
 #about h1{
 	font-weight:normal;
 	letter-spacing:3px;
