@@ -6,7 +6,9 @@ class SourceCodesController < ApplicationController
 
   def show
     @source_code = SourceCode.find(params[:id])
-    @file = fetch_file(@source_code.content.current_path)
+    cache do
+      @file = fetch_file(@source_code.content.current_path)
+    end
   end
 
   def create

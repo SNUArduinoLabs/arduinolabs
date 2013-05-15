@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130314105920) do
+ActiveRecord::Schema.define(:version => 20130315155439) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -136,15 +136,17 @@ ActiveRecord::Schema.define(:version => 20130314105920) do
     t.string   "university"
     t.string   "department"
     t.integer  "class_id"
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
+    t.datetime "created_at",                                         :null => false
+    t.datetime "updated_at",                                         :null => false
     t.text     "about_me"
-    t.integer  "log_in_counts",                :default => 0
+    t.integer  "log_in_count",                 :default => 0
     t.datetime "last_signed_in"
     t.string   "auth_token"
     t.string   "password_reset_token"
     t.datetime "password_reset_token_sent_at"
     t.integer  "points",                       :default => 0
+    t.string   "title",                        :default => "Member"
+    t.string   "public_avatar"
   end
 
 end

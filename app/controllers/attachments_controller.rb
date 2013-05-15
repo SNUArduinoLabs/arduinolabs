@@ -5,7 +5,9 @@ class AttachmentsController < ApplicationController
   def create
     p params
     @attachment = @attachable.attachments.create(params[:attachment])
-    render layout: false, content_type: "text/html"
+    respond_to do |format|
+      format.js
+    end
   end
 
   def destroy

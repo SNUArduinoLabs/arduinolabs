@@ -42,7 +42,9 @@ ActiveAdmin.register SourceCode do
     end
     attributes_table do
       row "Source Code" do  
-        render 'source_codes/code', source_code: code, file: fetch_file(code.content.current_path)
+        cache do
+          render 'source_codes/code', source_code: code, file: fetch_file(code.content.current_path)
+        end
       end
     end
     attributes_table do
