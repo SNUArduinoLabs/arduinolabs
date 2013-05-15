@@ -6,7 +6,7 @@ class SourceCodesController < ApplicationController
 
   def show
     @source_code = SourceCode.find(params[:id])
-    @file = Rails.cache.fetch([:source_code, "file"], raw: true) { fetch_file(@source_code.content.current_path) } if @source_code
+    @file = Rails.cache.fetch([:source_code, id], raw: true) { fetch_file(@source_code.content.current_path) } if @source_code
   end
 
   def create
