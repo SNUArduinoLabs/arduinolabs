@@ -42,9 +42,7 @@ ActiveAdmin.register SourceCode do
     end
     attributes_table do
       row "Source Code" do  
-        cache do
-          render 'source_codes/code', source_code: code, file: fetch_file(code.content.current_path)
-        end
+        render 'source_codes/code', source_code: code, file: Rails.cache.fetch([:source_code, code.id], raw: true) { fetch_file(code.content.current_path) } 
       end
     end
     attributes_table do
