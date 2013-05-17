@@ -9,6 +9,8 @@ Assignments::Application.routes.draw do
   get 'source_codes/:id/approve' => 'source_codes#approve', as: :approve
   get 'source_codes/:id/reject' => 'source_codes#reject', as: :reject
 
+  get '/home' => 'home#index', as: :home
+  root :to => 'welcome#index'
 
 
   get "uploader/create"
@@ -41,8 +43,6 @@ Assignments::Application.routes.draw do
     resources :source_codes       # Each submission has_many source_codes
   end
   
-  get '/home' => 'home#index', as: :home
-  root :to => 'welcome#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

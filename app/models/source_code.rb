@@ -1,6 +1,5 @@
 class SourceCode < ActiveRecord::Base
   attr_accessible :content
-  
 
   belongs_to :source_codeable, polymorphic: true
   belongs_to :user

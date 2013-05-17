@@ -11,7 +11,7 @@
 <div class="new-comment">
   <%= form_for [source_code, Comment.new] do |f| %>
 
-    <%= f.text_field :content %>
+    <%= f.text_field :content, col: 60 %>
     <%= f.submit "Comment", remote: true %>
   <% end %>
   <p>This comments will appear on the Source-code submissions page of the user </p>

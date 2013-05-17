@@ -8,8 +8,13 @@
 #
 
 
-AdminUser.create!(:email => 'admin@atsnu.com', :password => 'password', :password_confirmation => 'password')
+#AdminUser.create!(:email => 'admin@atsnu.com', :password => 'password', :password_confirmation => 'password')
 
+CATEGORIES = ["Art", "Electronics", "Arduino"]
+
+CATEGORIES.each do |cat|
+  Category.create(name: cat)
+end
 
 
 

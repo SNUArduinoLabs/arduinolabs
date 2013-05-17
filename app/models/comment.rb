@@ -1,4 +1,6 @@
 class Comment < ActiveRecord::Base
+  include PublicActivity::Common
+
   attr_accessible :commentable_id, :commentable_type, :content
 
   belongs_to :user

@@ -1,0 +1,12 @@
+
+<p>
+<%= activity.owner.name %> added a comment to 
+<% if activity.trackable %>
+  <%= activity.trackable.commentable.source_codeable.assignment.title %>
+<% else %>
+  which has been deleted now
+<% end %>
+
+</p>
+
+

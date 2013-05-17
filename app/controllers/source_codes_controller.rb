@@ -19,7 +19,10 @@ class SourceCodesController < ApplicationController
     @source_code.name = params[:source_code][:content].original_filename
 
     if @source_code.save
-      render layout: false, content_type: "text/html"
+      respond_to do |format|
+        format.js
+      end
+      #render layout: false, content_type: "text/html"
     else
       redirect_to @source_codeable, alert: "An error occurred while uploading"
     end

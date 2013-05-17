@@ -9,9 +9,7 @@
   <% end %>
 
   <%= f.inputs "Category" do %>
-    <%= f.semantic_fields_for :category_attributes do |c| %>
-      <%= c.input :name, hint: "Art, Android, Electronics etc", input_html: { value: @category.name } %>
-    <% end %>
+    <%= f.input :category, hint: "Art, Android, Electronics etc", collection => Category.all.collect { |t| [t.name, t.id] } %>
   <% end %>
 
   <%= f.inputs name: "Detailed Instructions" do %>

@@ -4,8 +4,17 @@ ActiveAdmin.register Assignment do
 
     def new
       @assignment = Assignment.new
-      @category = Category.new
+      #@assingment.build_category
       #      @attachment = @assignment.attachments.build
+    end
+
+    def create
+      @assignment = Assignment.new(params[:assignment])
+      if @assignment.save
+        redirect_to admin_assignments_path
+      else
+        render :new
+      end
     end
 
     def edit

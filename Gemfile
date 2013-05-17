@@ -22,6 +22,7 @@ gem 'coderay'
 # For New Relic
 gem 'newrelic_rpm'
 
+gem 'public_activity'
 
 
 # For Memcache

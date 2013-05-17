@@ -3,3 +3,11 @@
 
 <p class="lead">This part will be soon updated with the Activity Feed</p>
 <p>Try out some of the assignments, from the <%= link_to "List of Assignments", assignments_path %></p>
+
+<h2> 새로운 Stories </h2>
+<% @activities.each do |activity| %>
+  <%= activity.render %>
+<% end %>
+
+
+

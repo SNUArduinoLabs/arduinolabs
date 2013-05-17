@@ -2,9 +2,11 @@
 <% if @source_code.new_record? %>
   alert("Failed to upload the Source-Code: <%= j @source_code.errors.full_messages.join(' and ').html_safe %>");
 <% else %>
-  
   $("div.source-code-uploader .well").append("<p><%= @source_code.content.identifier %> Successfully Uploaded</p>");
   $("div.source-upload").css("display", "none");
+  $("div#source_codes div#didnt_upload").css("display", "none");
+  $("div.source_codes.index").remove();
+  $("div#source_codes").append("<%=j render 'source_codes/index', current_model: @source_codeable %>");
 <% end %>
 
 

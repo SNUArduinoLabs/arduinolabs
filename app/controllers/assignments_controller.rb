@@ -2,7 +2,6 @@ class AssignmentsController < ApplicationController
 
   before_filter :authenticate_user
 
-
   def index
     @assignments = Assignment.all
   end
