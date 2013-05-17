@@ -19,5 +19,8 @@ CATEGORIES.each do |cat|
   Category.create(name: cat)
 end
 
+Submission.all.each(&:destroy)
+Submission.all.each(&:destroy)
+
 
 

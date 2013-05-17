@@ -5,7 +5,7 @@ class Assignment < ActiveRecord::Base
   attr_accessible :content, :due_date, :points, :tagline, :title, :level, :difficulty, :category_attributes, :category_id
 
   has_many :attachments, as: :attachable, dependent: :destroy
-  has_many :submissions
+  has_many :submissions, dependent: :destroy
   belongs_to :category
 
   #accepts_nested_attributes_for :category
