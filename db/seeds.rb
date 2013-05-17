@@ -10,6 +10,9 @@
 
 #AdminUser.create!(:email => 'admin@atsnu.com', :password => 'password', :password_confirmation => 'password')
 
+Category.all.each(&:destroy)
+Category.all.each(&:destroy)
+
 CATEGORIES = ["Art", "Electronics", "Arduino"]
 
 CATEGORIES.each do |cat|
