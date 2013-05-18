@@ -1,7 +1,6 @@
 ActiveAdmin.register Assignment do
 
   controller do 
-
     def new
       @assignment = Assignment.new
       #@assingment.build_category
@@ -11,6 +10,7 @@ ActiveAdmin.register Assignment do
     def create
       @assignment = Assignment.new(params[:assignment])
       if @assignment.save
+        @assignment.create_activity key: "assignment.newly_added"
         redirect_to admin_assignments_path
       else
         render :new
@@ -21,8 +21,6 @@ ActiveAdmin.register Assignment do
       @assignment = Assignment.find(params[:id])
       @category = @assignment.category
     end
-
-
   end
 
   form :partial => "form"
@@ -53,6 +51,7 @@ ActiveAdmin.register Assignment do
     end
     column :tagline
     column :points
+    column :category
 
     default_actions
   end

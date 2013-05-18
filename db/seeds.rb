@@ -22,5 +22,37 @@ end
 Submission.all.each(&:destroy)
 Submission.all.each(&:destroy)
 
+SourceCode.all.each(&:destroy)
+SourceCode.all.each(&:destroy)
+
+Assignment.all.each(&:destroy)
+Assignment.all.each(&:destroy)
+
+Contribution.all.each(&:destroy)
+Contribution.all.each(&:destroy)
+
+Project.all.each(&:destroy)
+Project.all.each(&:destroy)
+
+Activity.all.each(&:destroy)
+Activity.all.each(&:destroy)
+
+Comment.all.each(&:destroy)
+Comment.all.each(&:destroy)
+
+Attachment.all.each(&:destroy)
+Attachment.all.each(&:destroy)
+
+SourceCode.all.each(&:destory)
+SourceCode.all.each(&:destory)
+
+Profile.all.each(&:destroy)
+Profile.all.each(&:destroy)
+
+User.all.each(&:destroy)
+User.all.each(&:destroy)
+
+
+
 
 

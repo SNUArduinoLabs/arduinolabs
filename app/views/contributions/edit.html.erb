@@ -1,0 +1,40 @@
+
+<h3> Your Contribution for <%= @contribution.project.title %> </h3>
+
+
+<div id="source_codes">
+  <% if @contribution.source_codes.any? %>
+    <%= render 'source_codes/index', current_model: @contribution %>
+  <% else %>
+    <div class="well" id="didnt_upload">
+      <p class="lead">You haven't uploaded any source-codes yet. Upload them to be reviewed by admin</p>
+    </div>
+  <% end %>
+</div>
+
+
+<%= render "attachments/list", current_model: @contribution, active_admin: false %> 
+
+<div class="span4">
+<%= render 'source_codes/uploader', current_model: @contribution %>
+</div>
+<div class="span4">
+<%= render "attachments/uploader", current_model: @contribution, active_admin: false %>
+</div>
+
+<h4>Description</h4>
+<strong> Please include a full detailed description of your contribution, including references to your source-code and other attachments related to the contribution </strong>
+<div class="well">
+  <%= form_for @contribution do |f| %>
+    <%= f.text_area :description, rows: "10", col: "40", class: "field span5" %>
+
+    <div class="control-group">
+      <div class="controls">
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+

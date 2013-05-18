@@ -1,5 +1,8 @@
 <% if @profile.new_record? %>
   alert("Failed to upload the files: <%= j @profile.errors.full_messages.join(' and ').html_safe %>");
 <% else %>
+  $("div.upload").css("display", "block");
   $("div.upload").append("<p><%= @profile.avatar.identifier %> Successfully Uploaded</p>");
+  $("div.progress").css("display", "none");
+  $("div#avatar-box").html('<a href="<%= @profile.avatar.url %>"><img src="<%= @profile.avatar.url(:thumb) %>" alt="<%= @profile.avatar.identifier %>" /></a>');
 <% end %>

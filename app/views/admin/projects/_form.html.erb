@@ -1,0 +1,29 @@
+
+<%= semantic_form_for [:admin, @project], html: { :enctype => "multipart/form-data" } do |f| %>
+  <%= f.inputs name: "Project Details" do %>
+    <%= f.input :title %>
+    <%= f.input :tagline, hint: "A 2-3 line description of the project" %>
+    <%= f.input :difficulty, hint: "Select 1 ~ 3" %>
+    <%= f.input :level, hint: "Select 1 ~ 3" %>
+    <%= f.input :points, hint: "Number of points earned by the user through the successfull completion of the projects" %>
+  <% end %>
+
+  <%= f.inputs "Category" do %>
+    <%= f.input :category, hint: "Art, Android, Electronics etc", collection => Category.all.collect { |t| [t.name, t.id] } %>
+  <% end %>
+
+  <%= f.inputs name: "Detailed Instructions" do %>
+    <%= f.input :content, :as => :ckeditor, :input_html => { :ckeditor => { :height => 400, :toolbar => 'Full' } } %>
+  <% end %>
+
+  <%= f.actions %>
+<% end %>
+
+<% if @project.attachments.any? %>
+  <%= render "attachments/list", current_model: @project, active_admin: true %>
+<% end %>
+<% if @project.new_record? %>
+  <h3>You can't upload any files until you create the project, upload the attachments from the edit page, after creating the project </h3>
+<% else %>
+  <%= render "attachments/uploader", current_model: @project, active_admin: true %>
+<% end %>

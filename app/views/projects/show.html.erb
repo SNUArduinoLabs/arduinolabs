@@ -1,0 +1,21 @@
+
+<% if current_user.projects.where("project_id = ?", @project.id).any? %>
+  <%= render "header", model: @project,  show_button: false, show_submission: false %>
+<% else %>
+  <%= render "header", model: @project,  show_button: true, show_submission: false %>
+<% end %>
+
+<h4>Detailed Instructions</h4>
+<pre style="padding:2em; background-color:#FFFFFF"><%= @project.content.html_safe %></pre>
+
+<% if @project.attachments.any? %>
+  <%= render "attachments/list", current_model: @project, active_admin: false %>
+<% end %>
+
+<% if @project.contributions.any? %>
+  <%= render "contributions/list", current_project: @project, user: nil %>
+<% end %>
+
+<h4>Comments</h4>
+<%= render 'comments/comment', commentable: @project %>
+

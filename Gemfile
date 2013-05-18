@@ -14,16 +14,14 @@ gem 'activeadmin'
 gem 'simple_form'
 gem 'ckeditor'
 gem 'carrierwave'
-gem 'rmagick', :require => 'RMagick'
+gem 'rmagick', :require => false 
 gem 'mini_magick'
 gem 'fog', '~> 1.0.0'
 gem 'coderay'
-
 # For New Relic
 gem 'newrelic_rpm'
-
 gem 'public_activity'
-
+gem 'thin'
 
 # For Memcache
 gem 'dalli'

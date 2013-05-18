@@ -2,7 +2,7 @@ class Assignment < ActiveRecord::Base
   include PublicActivity::Common  
 
   # Not accessable is :completed, :completed_at
-  attr_accessible :content, :due_date, :points, :tagline, :title, :level, :difficulty, :category_attributes, :category_id
+  attr_accessible :content, :due_date, :points, :tagline, :title, :level, :difficulty, :category_id
 
   has_many :attachments, as: :attachable, dependent: :destroy
   has_many :submissions, dependent: :destroy

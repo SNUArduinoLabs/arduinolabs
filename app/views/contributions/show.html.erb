@@ -1,0 +1,30 @@
+
+
+
+
+
+<h3>Contribution for <%= @contribution.project.title %></h3>
+<%= link_to "Edit this Contribution", edit_contribution_path(@contribution), class: "btn" %>
+
+
+<h4>Description</h4>
+<div class="well">
+  <p class="lead"><%= @contribution.description %></p>
+</div>
+
+<% if @contribution.source_codes.any? %>
+  <%= render 'source_codes/index', current_model: @contribution %>
+<% else %>
+  <div class="well">
+    <p class="lead">You haven't uploaded any source-codes yet. Upload them to be be reviewed by admin</p>
+  </div>
+<% end %>
+
+<%= render 'attachments/list', current_model: @contribution, active_admin: false %>
+
+<h4> Commentds and Feedback </h4>
+<%= render 'comments/comment', commentable: @contribution %>
+
+
+
+

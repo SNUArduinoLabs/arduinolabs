@@ -11,6 +11,7 @@ class CommentsController < ApplicationController
     respond_to do |wants|
       if @comment.save
         @comment.create_activity key: "#{@commentable.class.name.downcase}.commented_on", owner: current_user
+        wants.html { redirect_to @commentable }
         wants.json { render :json => @comment.to_json }
       else
         wants.json { render :json => @comment.to_json, status: :unprocessable_entity }

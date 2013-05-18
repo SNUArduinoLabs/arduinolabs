@@ -1,0 +1,32 @@
+
+<div class="activity">
+  <div class="body">
+    <% image = image_path "icons/#{activity.key}" %>
+    <div class="mega-icon" style="background-image: url(<%= image %>.svg)"></div>
+    <abbr class="timeago" title="<%= activity.created_at %>">
+      <%= time_ago_in_words(activity.created_at) %> ago
+    </abbr>
+    <div class="title">
+      <% if activity.owner %>
+        <%= link_to activity.owner.full_name, a.owner %>
+      <% elsif activity.key == "assignment.newly_added" %>
+        Admin
+      <% else %>
+        someone
+      <% end %>
+    </div>
+    <div class="details">
+      <div class="avatar">
+        <% if activity.owner %>
+          <%= image_tag activity.owner.profile.avatar.url(:mini_thumb), width: "30", height: "30" %>
+        <% else %>
+          <%= image_tag "http://i0.wp.com/a248.e.akamai.net/assets.github.com/images/gravatars/gravatar-140.png", width: "30", height: "30" %>
+        <% end %>
+      </div>
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+
+

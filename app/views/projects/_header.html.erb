@@ -1,0 +1,43 @@
+
+<div class="well">
+  <% contribution = current_user.contributions.where(:project_id => model.id).first %>
+  <% show_contribtuion = (contribution) ? true : false %>
+  <h3 style="display:inline"><%= "Your contributions for " if show_contribtuion %><%= link_to model.title, user_contributions_path(model) %></h3> 
+  <table class="table table-striped">
+    <tr>
+      <td width="70%">
+        <div class="pagination pagination-large">
+          <ul>
+            <li>
+              <span>Category <%= intensity_badge_tag(model.category.name) %></span>
+            </li>
+            <li>
+              <span>Level <%= intensity_badge_tag(model.level) %></span>
+            </li>
+            <li>
+              <span>Difficulty <%= intensity_badge_tag(model.difficulty) %></span>
+            </li>
+          </ul>
+        </div>
+      </td>
+      <td style="vertical-align:top">
+        <% if show_button %>
+          <%= link_to "프로젝트에 참여하기", start_project_path(model.id), class: "btn btn-success" %>
+        <% else %>
+          <% contribution = current_user.contributions.where(:project_id => model.id).first %>
+          <div class="pagination">
+            <ul>
+              <li>
+                <%= link_to "Create a New Contribution", add_contribution_path(model.id), class: "btn btn-success" %>
+              </li>
+              <li>
+                <%= link_to "See your contributions", user_contributions_path(model), class: "btn" if contribution %>
+              </li>
+            </ul>
+          </div>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+  <p class="lead"><%= model.tagline %></p>
+</div>

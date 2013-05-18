@@ -4,8 +4,8 @@ class Submission < ActiveRecord::Base
   belongs_to :user
   belongs_to :assignment
 
-  has_many :comments, as: :commentable
-  has_many :source_codes, as: :source_codeable
+  has_many :comments, as: :commentable, dependent: :destroy
+  has_many :source_codes, as: :source_codeable, dependent: :destroy
   has_many :attachments, as: :attachable, dependent: :destroy
 
 

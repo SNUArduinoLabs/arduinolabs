@@ -1,0 +1,19 @@
+
+<p>
+  <% if activity.trackable %>
+    <% assignment = activity.trackable %>
+    A Brand New Assignment (<%= link_to assignment.title, assignment %>) has just been added to the site in the <%= assignment.category.name %>'s Category
+    <p></p>
+    <p></p>
+    <p></p>
+    <% if assignment.attachments.any? %>
+      <a href="<%= assignment_path(assignment) %>">
+        <%= image_tag assignment.attachments.first.filename.url(:activity_version), width: "400", height: "300" %>
+      </a>
+    <% end %>
+  <% end %>
+
+</p>
+
+
+

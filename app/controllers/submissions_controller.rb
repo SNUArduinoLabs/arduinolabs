@@ -1,9 +1,6 @@
 # encoding: UTF-8
 
 class SubmissionsController < ApplicationController
-
-  
-
   before_filter :authenticate_user
 
   def start
@@ -36,7 +33,6 @@ class SubmissionsController < ApplicationController
     @submission = Submission.find(params[:id])
     @assignment = @submission.assignment
     @attachment = Attachment.new
-
   end
  
 

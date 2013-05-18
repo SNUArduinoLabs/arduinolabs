@@ -1,0 +1,16 @@
+<p>
+  <% if activity.trackable %>
+    <% project = activity.trackable %>
+    A Brand New Project (<%= link_to project.title, project %>) has just been added to the site in the <%= project.category.name %>'s Category
+    <p></p>
+    <p></p>
+    <p></p>
+    <% if project.attachments.any? %>
+      <a href="<%= project_path(project) %>">
+        <%= image_tag project.attachments.first.filename.url(:activity_version), width: "400", height: "300" %>
+      </a>
+    <% end %>
+  <% end %>
+
+</p>
+

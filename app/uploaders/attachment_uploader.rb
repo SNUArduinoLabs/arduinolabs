@@ -53,6 +53,13 @@ class AttachmentUploader < CarrierWave::Uploader::Base
     process :set_content_type
   end
 
+  version :activity_version do
+    process :cover
+    process :resize_to_fill => [400, 300]
+    process :convert => 'jpg'
+    process :set_content_type
+  end
+
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   # def extension_white_list

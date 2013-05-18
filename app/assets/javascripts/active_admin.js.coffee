@@ -28,21 +28,6 @@ $ ->
   $(".attachment-remove").click (e) ->
     $(this).closest('.thumbnail-container').remove()
 
-$ -> 
-  $("form.new_comment input[type=submit]").click (e) ->
-    e.preventDefault()
-    url = $("form.new_comment").attr("action")
-    $.ajax({
-          url: url
-        , type: "POST"
-        , data: $('form.new_comment').serialize()
-        , dataType: 'json'
-        , success: (res) ->
-            value = $("#comment_content").val()
-            $("#comment_content").val("")
-            $("div.Comments").append("<p><strong>You -> </strong>" + value )
-
-      })
 
 
 

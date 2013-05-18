@@ -35,7 +35,9 @@
                   <%= link_to "All Assignments", assignments_path %>
                 </li>
                 <li class="divider-vertical"></li>
-                <li><a href="#">All Projects</a></li>
+                <li>
+                  <%= link_to "All Projects", projects_path %>
+                </li>
                 <li class="divider-vertical"></li>
               </ul>
 
@@ -70,6 +72,11 @@
                 <li>
                   <%= link_to submissions_path do %>
                     <i class="icon-lightbulb"></i> My Assignments
+                  <% end %>
+                </li>
+                <li>
+                  <%= link_to my_projects_path do %>
+                    <i class="icon-briefcase"></i> My Projects
                   <% end %>
                 </li>
                 <li>

@@ -1,0 +1,20 @@
+
+<% if commentable.comments.any? %>
+  <div class="well">
+    <div class="Comments">
+      <% commentable.comments.each do |cmt| %>
+        <p>
+          <strong><%= cmt.user.first_name %></strong> -> <%= cmt.content %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+<div class="well">
+  <div class="new-comment">
+    <%= simple_form_for [commentable, Comment.new] do |f| %>
+      <%= f.input :content, input_html: { rows: 5, cols: 30 }  %>
+      <%= f.submit "Comment", remote: true %>
+    <% end %>
+  </div>
+</div>

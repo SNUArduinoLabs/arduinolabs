@@ -1,8 +1,17 @@
 
 <p>
-<%= activity.owner.name %> added a comment to 
+<%= activity.owner.full_name %> added a comment on the 
 <% if activity.trackable %>
-  <%= activity.trackable.commentable.source_codeable.assignment.title %>
+  <% commentable = activity.trackable.commentable %> 
+  <%= link_to "source code", commentable %> related to
+  <% if commentable.source_codeable.class.name == "Submission" %>
+    <% assignment = commentable.source_codeable.assignment %>
+    <%= link_to assignment.title, assignment_path(assignment) %>
+  <% elsif commentable.source_codeable.class.name == "Contribution" %>
+    <% project = commentable.source_codeable.project %>
+    <%= link_to project.title, project_path(project) %>
+  <% end %>
+    
 <% else %>
   which has been deleted now
 <% end %>

@@ -1,0 +1,17 @@
+
+<p>
+  <% if activity.trackable %>
+    <% contribution = activity.trackable %>
+    A Brand New (<%= link_to "contribution", contribution %>) has just been added to the project (<%= link_to contribution.project.title, contribution.project %>) 
+    in the <%= contribution.project.category.name %>'s Category
+    <p></p>
+    <p></p>
+    <p></p>
+    <% if contribution.attachments.any? %>
+      <a href="<%= contribution_path(contribution) %>">
+        <%= image_tag contribution.attachments.first.filename.url(:activity_version), width: "400", height: "300" %>
+      </a>
+    <% end %>
+  <% end %>
+
+</p>

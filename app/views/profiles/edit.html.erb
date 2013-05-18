@@ -9,7 +9,7 @@
             <legend>Edit Profile </legend>
             <tr>
               <td rowspan="2" width="30%">
-                <div style="margin-left: 5px;">
+                <div id="avatar-box" style="margin-left: 5px;">
                   <a href="<%= @profile.avatar.url %>">
                     <img src="<%= @profile.avatar.url(:thumb) %>" alt="<%= @profile.avatar.identifier %>" />
                   </a>

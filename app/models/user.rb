@@ -8,10 +8,12 @@ class User < ActiveRecord::Base
   validates_presence_of :class_id, :first_name, :last_name, :university, :department
 
 
-  has_many :submissions
+  has_many :submissions, dependent: :destroy
   has_many :comments        # TODO
-  has_many :source_codes 
-  has_one :profile
+  has_many :source_codes, dependent: :destroy
+  has_one :profile, dependent: :destroy
+  has_and_belongs_to_many :projects
+  has_many :contributions
 
 
   def full_name

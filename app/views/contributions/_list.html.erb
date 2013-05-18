@@ -1,0 +1,53 @@
+
+<div class="contributions_index">
+  <div class="well">
+
+    <% if user.nil? %>
+      <h4>List of Contributions to the Project</h4>
+      <% contributions = current_project.contributions.order("created_at desc") %>
+    <% else %>
+      <h4>Your Contribtuions to the project </h4>
+      <% contributions = current_project.contributions.where("user_id = ?", user.id).order("created_at desc") %>
+    <% end %>
+
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>Contribution</th>
+          <th> Status </th>
+          <th>By </th>
+          <th>View </th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% contributions.each do |contrib| %>
+          <tr>
+            <td>
+              <%= truncate(contrib.description) %>
+            </td>
+            <td>
+              <% if contrib.status == "completed" %>
+                <span class="label label-success">Completed</span>
+              <% elsif contrib.status == "pending" %> 
+                <span class="label">Pending</span>
+              <% else %> 
+                <span class="label label-warning">Requires Modification</span>
+              <% end %>
+            </td>
+            <td>
+              <% if contrib.user %>
+                <%= link_to contrib.user.full_name, profile_path(contrib.user.profile) %>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to "View", contribution_path(contrib), class: 'btn btn-small' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+

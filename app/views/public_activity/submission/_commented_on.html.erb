@@ -1,10 +1,8 @@
 
 <p>
-<%= activity.owner.name %> added a comment to 
+<%= activity.owner.full_name %> added a comment to 
 <% if activity.trackable %>
-  <%= activity.trackable.commentable.assignment.name %>
-
-
+  <%= link_to activity.trackable.commentable.assignment.title, activity.trackable.commentable.assignment %>
 <% else %>
   which has been deleted now
 <% end %>

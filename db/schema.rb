@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517101735) do
+ActiveRecord::Schema.define(:version => 20130518012843) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -45,6 +45,13 @@ ActiveRecord::Schema.define(:version => 20130517101735) do
   add_index "activities", ["recipient_id", "recipient_type"], :name => "index_activities_on_recipient_id_and_recipient_type"
   add_index "activities", ["trackable_id", "trackable_type"], :name => "index_activities_on_trackable_id_and_trackable_type"
 
+  create_table "admin_profiles", :force => true do |t|
+    t.string   "avatar"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "admin_user_id"
+  end
+
   create_table "admin_users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
@@ -58,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20130517101735) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "full_name"
   end
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
@@ -114,6 +122,15 @@ ActiveRecord::Schema.define(:version => 20130517101735) do
     t.integer  "user_id"
   end
 
+  create_table "contributions", :force => true do |t|
+    t.integer  "project_id"
+    t.integer  "user_id"
+    t.string   "description"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.string   "status",      :default => "pending"
+  end
+
   create_table "profiles", :force => true do |t|
     t.integer  "user_id"
     t.text     "bio"
@@ -122,6 +139,24 @@ ActiveRecord::Schema.define(:version => 20130517101735) do
     t.string   "avatar"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "projects", :force => true do |t|
+    t.string   "title"
+    t.string   "tagline"
+    t.string   "content"
+    t.integer  "points"
+    t.integer  "difficulty"
+    t.integer  "level"
+    t.integer  "category_id"
+    t.string   "status",      :default => "STARTED"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+  end
+
+  create_table "projects_users", :id => false, :force => true do |t|
+    t.integer "user_id"
+    t.integer "project_id"
   end
 
   create_table "source_codes", :force => true do |t|
