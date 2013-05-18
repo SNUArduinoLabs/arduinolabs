@@ -2,7 +2,7 @@
 <div class="activity">
   <div class="body">
     <% image = image_path "icons/#{activity.key}" %>
-    <div class="mega-icon" style="background-image: url(<%= image %>.svg)"></div>
+    <div class="mega-icon" style="background-image: url(<%= image %>.png)"></div>
     <abbr class="timeago" title="<%= activity.created_at %>">
       <%= time_ago_in_words(activity.created_at) %> ago
     </abbr>

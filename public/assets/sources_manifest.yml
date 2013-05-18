@@ -1,13 +1,10 @@
 ---
-icons/assignment.newly_added.svg: 3acb2f2fcf93568c509e4e701aeba5aa
-icons/contribution.commented_on.svg: 07e8bde031a11a202954744882ad4ffe
-icons/contribution.newly_added.svg: 3acb2f2fcf93568c509e4e701aeba5aa
-icons/post.commented.svg: 07e8bde031a11a202954744882ad4ffe
-icons/post.create.svg: 3acb2f2fcf93568c509e4e701aeba5aa
-icons/post.destroy.svg: 231ce8847295e073ca1eb404580f6bc4
-icons/post.update.svg: 0d30c9bc422415b51d5dcd99ab954942
-icons/project.newly_added.svg: 3acb2f2fcf93568c509e4e701aeba5aa
-icons/sourcecode.commented_on.svg: 07e8bde031a11a202954744882ad4ffe
+icons/assignment.newly_added.png: e14144d1dc17ea6b9fb8d40650dd72f3
+icons/contribution.commented_on.png: 77a7b79bfc80e8c4af4c0f9f32949a4f
+icons/contribution.newly_added.png: e14144d1dc17ea6b9fb8d40650dd72f3
+icons/project.commented_on.png: 77a7b79bfc80e8c4af4c0f9f32949a4f
+icons/project.newly_added.png: e14144d1dc17ea6b9fb8d40650dd72f3
+icons/sourcecode.commented_on.png: 77a7b79bfc80e8c4af4c0f9f32949a4f
 active_admin.js: fb0c9bb9e2a27b559ecac44f08c05727
 application.js: 293a7dd0eb65d22b5e48ce8780399b01
 active_admin.css: 365863ba907fe214c6ea554a3f61541d

@@ -1,0 +1,10 @@
+
+<p>
+  <%= activity.owner.full_name %> added a comment on the project  
+  <% if activity.trackable %>
+    <%= link_to activity.trackable.commentable.project.title, activity.trackable.commentable.project %>
+  <% else %>
+    which has been deleted now
+  <% end %>
+
+</p>
