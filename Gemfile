@@ -6,9 +6,6 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-group :production do
-  gem 'pg'
-end
 
 gem 'activeadmin'
 gem 'simple_form'
@@ -22,6 +19,8 @@ gem 'coderay'
 gem 'newrelic_rpm'
 gem 'public_activity'
 gem 'thin'
+
+gem 'sqlite3'
 
 # For Memcache
 gem 'dalli'
@@ -45,7 +44,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  #gem 'therubyracer', :platforms => :ruby
   gem 'turbo-sprockets-rails3'
 end
 
